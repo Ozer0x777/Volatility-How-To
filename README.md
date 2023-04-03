@@ -2,7 +2,7 @@ Volatility est un outil open source permettant d'analyser des images de mémoire
 
 Voici une documentation d'installation et d'utilisation de Volatility:
 
-Installation
+### Installation
 
 Volatility est un outil en ligne de commande et nécessite Python pour fonctionner. Les étapes ci-dessous vous aideront à installer Volatility sur votre machine.
 Étape 1: Installation de Python
@@ -28,7 +28,8 @@ python setup.py install
 ```
 Cette commande installera Volatility sur votre machine.
 
-Utilisation
+
+### Utilisation
 
 Maintenant que Volatility est installé sur votre machine, vous pouvez commencer à l'utiliser pour analyser des images de mémoire. Voici quelques exemples de commandes que vous pouvez exécuter.
 Analyse de l'image de mémoire
