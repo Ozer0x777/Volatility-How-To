@@ -73,7 +73,7 @@ volatility netscan -f <path-to-image> --profile=<profile>
 ```
 Cette commande listera toutes les connexions réseau établies dans l'image de mémoire, y compris les adresses IP locales et distantes, ainsi que les ports utilisés.
 
- ## Acquisition de l'image de mémoire volatile
+ ## Acquisition de l'image
 
 La première étape pour utiliser Volatility est d'acquérir une image de la mémoire volatile du système cible. Il existe plusieurs outils pour réaliser cette étape, notamment :
 
@@ -90,7 +90,8 @@ $ python vol.py -f /dev/mem imagecopy -O image.raw
   
   
 Ce commandement crée une copie de l'image de mémoire volatile dans un fichier nommé "image.raw".
-IV. Identification du profil
+ 
+Identification du profil
 
 Après avoir acquis l'image de la mémoire volatile, la prochaine étape consiste à identifier le profil du système cible. Le profil correspond à la configuration matérielle et logicielle du système. Cette étape est essentielle car elle permet à Volatility de comprendre la structure de la mémoire et de récupérer les informations nécessaires pour l'analyse.
 
