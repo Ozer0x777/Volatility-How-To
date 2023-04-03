@@ -177,3 +177,28 @@ Offset(P)          Local Address             Remote Address            Pid
 0xffff9c02a0a18a00 192.168.0.100:51759       192.0.78.25:443           2004
 0xffff9c02a0a18a00 192.168.0.100:51760       192.0.78.25:443           2004
 ```
+ 
+ 
+## Analyse de registre
+
+L'analyse de registre est une autre tâche courante dans l'analyse de la mémoire volatile. Volatility fournit plusieurs plugins pour analyser les fichiers de registre de Windows, tels que le fichier SYSTEM, le fichier SOFTWARE, etc.
+
+Pour lister les clés de registre actives, vous pouvez utiliser le plugin printkey :
+
+
+```
+$ python vol.py -f image.raw --profile=<nom du profil> printkey -K "HKLM\Software\Microsoft\Windows\CurrentVersion\Run"
+```
+ 
+Cette commande affichera les valeurs des clés de registre sous la clé spécifiée (HKLM\Software\Microsoft\Windows\CurrentVersion\Run dans l'exemple ci-dessus).
+
+Pour lister les clés de registre inactives, vous pouvez utiliser le plugin hivelist pour trouver les fichiers de registre, puis utiliser le plugin printkey pour afficher les clés de registre :
+
+```
+$ python vol.py -f image.raw --profile=<nom du profil> hivelist
+$ python vol.py -f image.raw --profile=<nom du profil> printkey -K "HKLM\SYSTEM\ControlSet001\Control\Terminal Server"
+```
+ 
+Cette commande affichera les valeurs des clés de registre sous la clé spécifiée (HKLM\SYSTEM\ControlSet001\Control\Terminal Server dans l'exemple ci-dessus).
+
+Il existe également des plugins pour analyser les fichiers de registre eux-mêmes, tels que hashdump pour extraire les mots de passe des utilisateurs à partir de la base de données SAM, et mftparser pour extraire les informations de la table de fichiers maîtres (MFT) à partir du fichier NTFS du système de fichiers.
