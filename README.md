@@ -177,26 +177,3 @@ Offset(P)          Local Address             Remote Address            Pid
 0xffff9c02a0a18a00 192.168.0.100:51759       192.0.78.25:443           2004
 0xffff9c02a0a18a00 192.168.0.100:51760       192.0.78.25:443           2004
 ```
-  
-Vous pouvez également utiliser d'autres plugins pour analyser les connexions UDP et TCP, tels que connscan et sockets. Voici un exemple de commande pour analyser les connexions TCP :
-
-```
-$ python vol.py -f image.raw --profile=<nom du profil> connscan
-```
-  
-Cette commande affichera une liste de toutes les connexions TCP actives, ainsi que les PID correspondants, les adresses IP et ports distants et locaux, et l'état de la connexion (ouvert, fermé, etc.).
-
-Voici un exemple de sortie pour une image Windows 10 :
-
-
-```
-Volatility Foundation Volatility Framework 2.6.1
-Offset(P)          Local Address             Remote Address            State          Pid
------------------- ------------------------ ------------------------ -------------- ---
-0xffff9c029a4f6c00 192.168.0.100:51756       13.107.4.50:443           ESTABLISHED    2004
-0xffff9c0298c7b800 192.168.0.100:51757       216.58.207.46:443         ESTABLISHED    2004
-0xffff9c0298b6d200 192.168.0.100:51758       216.58.207.46:443         ESTABLISHED    2004
-0xffff9c02a0a18a00 192.168.0.100:51759       192.0.78.25:443           ESTABLISHED    2004
-0xffff9c02a0a18a00 192.168.0.100:51760       192.0.78.25:443           ESTABLISHED    2004
-```
-  
