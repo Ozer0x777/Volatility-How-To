@@ -1,6 +1,7 @@
 Volatility est un outil open source permettant d'analyser des images de mémoire pour la recherche de malwares et d'autres types de données.
 
 Voici une documentation d'installation et d'utilisation de Volatility:
+
 Installation
 
 Volatility est un outil en ligne de commande et nécessite Python pour fonctionner. Les étapes ci-dessous vous aideront à installer Volatility sur votre machine.
