@@ -8,9 +8,11 @@ Voici une documentation d'installation et d'utilisation de Volatility:
 ## Installation
 
 Volatility est un outil en ligne de commande et nécessite Python pour fonctionner. Les étapes ci-dessous vous aideront à installer Volatility sur votre machine.
+
 Étape 1: Installation de Python
 
 Si Python n'est pas déjà installé sur votre machine, vous pouvez le télécharger et l'installer à partir du site officiel de Python (https://www.python.org/downloads/). Assurez-vous de télécharger la version 3.x de Python.
+
 Étape 2: Téléchargement de Volatility
 
 Le code source de Volatility est disponible sur GitHub. Vous pouvez télécharger la dernière version de Volatility en exécutant la commande suivante dans votre terminal:
